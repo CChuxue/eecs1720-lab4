@@ -125,7 +125,9 @@ window.onload = function() {
     preview.setY(-16);
     $('#mode').html(gamemode);
   });
-
+  $('#showDeath').on('click', function(eve) {
+    deathGroup.toggleVisible();
+  });
   var config = {
     type: Phaser.AUTO,
     width: 960,
