@@ -125,7 +125,7 @@ window.onload = function() {
     preview.setY(-16);
     $('#mode').html(gamemode);
   });
-  $('#showDeath').on('click', function(eve) {
+  $('#showDeath').change(function(eve) {
     deathGroup.toggleVisible();
   });
   var config = {
