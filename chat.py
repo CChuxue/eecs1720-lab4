@@ -154,6 +154,9 @@ def change():
 
 @app.route('/map', methods=['GET'])
 def get_map():
+    if redis.exists('map'):
+        mapData = pickle.loads(redis.get('map'))
+
     response = app.response_class(
         response=json.dumps(mapData),
         status=200,
